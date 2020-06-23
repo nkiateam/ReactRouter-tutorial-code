@@ -34,7 +34,7 @@
 
 각 섹션별로 Git Repository 의 브랜치가 생성되어 있습니다.
 
--   [1-1. 기본 라우트 준비 및 시작](https://github.com/insoo-Jang/ReactRouter-tutorial-code/tree/feature/step1)
+-   [1-1. 기본 라우트 준비 및 시작](https://github.com/insoo-Jang/ReactRouter-tutorial-code/tree/step1)
 -   [2-2. test2](https://github.com/velopert/storybook-tutorial-code/tree/02b)
 -   [2-3. test3](https://github.com/velopert/storybook-tutorial-code/tree/02c)
 -   [3. test4](https://github.com/velopert/storybook-tutorial-code/tree/03)
