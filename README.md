@@ -16,25 +16,13 @@
   <a href="https://en.wikipedia.org/wiki/MIT_License"><img src="https://img.shields.io/npm/l/react-design-editor?style=flat-square"></a>
 </p>
 
-# Demos
+# Main
 
-[React-Router Tutorial Code](https://???/)
+-   [뒤로가기](https://github.com/velopert/storybook-tutorial-code/tree/master)
+-   [완료소스](https://github.com/velopert/storybook-tutorial-code/tree/feature/step1)
 
-## Installation
+## Idex 
 
--   npm install
 
-## Getting Started
-
--   git clone https://??? - Clone the project
--   npm start - Run script
--   http://localhost:8080 - Host access
-
-## Tag
-
-각 섹션별로 Git Repository 의 태그가 생성되어 있습니다.
-
--   [1-1. test1](https://github.com/velopert/storybook-tutorial-code/tree/02a)
--   [2-2. test2](https://github.com/velopert/storybook-tutorial-code/tree/02b)
--   [2-3. test3](https://github.com/velopert/storybook-tutorial-code/tree/02c)
--   [3. test4](https://github.com/velopert/storybook-tutorial-code/tree/03)
+1. asdsad
+2. dasd
