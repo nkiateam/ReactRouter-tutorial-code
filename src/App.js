@@ -18,18 +18,16 @@ class App extends Component {
     )
 
     renderRoutes = routes =>
-        routes.reduce(
-            (prev, route) =>
-                prev.concat(
-                    <React.Fragment key={route.path}>
-                        {this.renderRoute(route)}
-                        {route.subRoutes && route.subRoutes.length
-                            ? this.renderRoutes(route.subRoutes)
-                            : null}
-                    </React.Fragment>,
-                ),
-            [],
-        )
+        routes.reduce((prev, route) => {
+            return prev.concat(
+                <React.Fragment key={route.path}>
+                    {this.renderRoute(route)}
+                    {/*{route.subRoutes && route.subRoutes.length*/}
+                    {/*    ? this.renderRoutes(route.subRoutes)*/}
+                    {/*    : null}*/}
+                </React.Fragment>,
+            )
+        }, [])
 
     render() {
         return (
@@ -56,6 +54,17 @@ class App extends Component {
                     <Switch>
                         <Container routes={mainRoutes}>
                             <React.Suspense fallback={<div>loading...</div>}>
+                                <Route
+                                    exact
+                                    path="/"
+                                    render={() => {
+                                        return (
+                                            <Redirect
+                                                to={'/MonitoringComponent'}
+                                            />
+                                        )
+                                    }}
+                                />
                                 {this.renderRoutes(mainRoutes)}
                             </React.Suspense>
                         </Container>

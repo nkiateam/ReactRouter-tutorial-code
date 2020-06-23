@@ -11,6 +11,31 @@ module.exports = {
                 options: {
                     cacheCompression: false,
                     cacheDirectory: true,
+                    presets: [
+                        [
+                            '@babel/preset-env',
+                            {
+                                modules: false,
+                                useBuiltIns: 'usage',
+                                corejs: 3,
+                            },
+                        ],
+                        '@babel/preset-react',
+                    ],
+                    plugins: [
+                        // ['import', { libraryName: 'antd', style: true }],
+                        '@babel/plugin-transform-runtime',
+                        '@babel/plugin-syntax-dynamic-import',
+                        ['@babel/plugin-proposal-decorators', { legacy: true }],
+                        '@babel/plugin-syntax-async-generators',
+                        [
+                            '@babel/plugin-proposal-class-properties',
+                            { loose: false },
+                        ],
+                        '@babel/plugin-proposal-object-rest-spread',
+                        'react-hot-loader/babel',
+                        'dynamic-import-webpack',
+                    ],
                 },
             },
             {
