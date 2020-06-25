@@ -26,7 +26,7 @@
 
 ## Getting Started
 
--   git clone https://??? - Clone the project
+-   git clone https://github.com/insoo-Jang/ReactRouter-tutorial-code.git- Clone the project
 -   npm start - Run script
 -   http://localhost:8080 - Host access
 
