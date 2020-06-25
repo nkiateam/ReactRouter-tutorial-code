@@ -29,7 +29,7 @@ const routes = [
     {
         path: '/MonitoringComponent/:id',
         component: MonitoringComponent,
-        isMenu: true,
+        isMenu: false,
         icon: 'DesktopOutlined',
         title: 'title.main.monitoring',
     },
