@@ -1,5 +1,6 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import { Col, Row, Tree } from 'antd'
+import Context from '../commons/container/Context'
 
 const treeData = [
     {
@@ -7,16 +8,15 @@ const treeData = [
         key: '0-0',
         children: [
             {
-                title: '집',
+                title: '자전거',
                 key: '0-0-0',
                 children: [
                     {
-                        title: '가자',
+                        title: '동호회',
                         key: '0-0-0-0',
-                        disableCheckbox: true,
                     },
                     {
-                        title: '가즈아',
+                        title: '모집',
                         key: '0-0-0-1',
                     },
                 ],
@@ -28,7 +28,6 @@ const treeData = [
                     {
                         title: '출근',
                         key: '0-0-1-0',
-                        disableCheckbox: true,
                     },
                     {
                         title: '퇴근',
@@ -39,12 +38,24 @@ const treeData = [
         ],
     },
 ]
+
 const treeComponent = props => {
+    const { onSelect = () => {} } = props
+
+    const { onSelectResource } = useContext(Context)
+
+    const onSelectTree = param => {
+        if (param.length === 0) {
+            return
+        }
+        console.log(param)
+        onSelectResource(param)
+    }
     return (
         <Row justify="left" align="middle">
             <Col span={12}>
                 <Tree
-                    // onSelect={onSelect}
+                    onSelect={onSelectTree}
                     // onCheck={onCheck}
                     defaultExpandedKeys={['0-0']}
                     treeData={treeData}

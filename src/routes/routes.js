@@ -26,6 +26,13 @@ const routes = [
         icon: 'DesktopOutlined',
         title: 'title.main.dashboard',
     },
+    {
+        path: '/MonitoringComponent/:id',
+        component: MonitoringComponent,
+        isMenu: true,
+        icon: 'DesktopOutlined',
+        title: 'title.main.monitoring',
+    },
 ]
 
 export default routes
