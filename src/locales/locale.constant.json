@@ -6,10 +6,9 @@
     "action": {},
     "title": {
         "main": {
-            "dashboard": "메인",
-            "explain": "엔덕이란?",
-            "rule": "엔덕규칙",
-            "blindBoard": "익명게시판"
+            "dashboard": "대시보드",
+            "list": "리스트",
+            "monitoring": "모니터링"
         },
         "sub": {}
     }
