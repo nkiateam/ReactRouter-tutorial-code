@@ -35,4 +35,4 @@
 각 섹션별로 Git Repository 의 브랜치가 생성되어 있습니다.
 
 -   [1. 기본 라우트 준비 및 시작](https://github.com/insoo-Jang/ReactRouter-tutorial-code/tree/step1)
--   [2. 실무형 라우트 준비 및 시작](https://github.com/insoo-Jang/ReactRouter-tutorial-code/tree/step2)
+-   [2. 실무형 라우트 준비 및 시작](https://github.com/insoo-Jang/ReactRouter-tutorial-code/tree/develop)
