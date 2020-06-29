@@ -1,7 +1,6 @@
 const webpack = require('webpack')
 const path = require('path')
 const merge = require('webpack-merge')
-const HtmlWebpackPlugin = require('html-webpack-plugin')
 const TerserPlugin = require('terser-webpack-plugin')
 const baseConfig = require('./webpack.common.js')
 
@@ -10,17 +9,15 @@ const plugins = [
     new webpack.LoaderOptionsPlugin({
         minimize: true,
     }),
-    // index.html 로 의존성 파일들 inject해주는 플러그인
-    new HtmlWebpackPlugin({
-        filename: 'index.html',
-        title: 'React Design Editor',
+    new webpack.optimize.MinChunkSizePlugin({
+        minChunkSize: 30000,
     }),
 ]
 module.exports = merge(baseConfig, {
     mode: 'production',
     entry: {
-        vendor: ['react', 'react-dom', 'lodash', 'antd'],
-        app: [path.resolve(__dirname, 'src/index.js')],
+        vendor: ['react', 'react-dom', 'react-router-dom', 'lodash', 'antd'],
+        app: ['@babel/polyfill', path.resolve(__dirname, 'src/index.js')],
     },
     output: {
         // entry에 존재하는 app.js, vendor.js로 뽑혀 나온다.
