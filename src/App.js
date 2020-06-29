@@ -42,8 +42,6 @@ class App extends Component {
                         name="description"
                         content="React Design Editor has started to developed direct manipulation of editable design tools like Powerpoint, We've developed it with react.js, ant.design, fabric.js "
                     />
-                    <link rel="manifest" href="./manifest.json" />
-                    <link rel="shortcut icon" href="./favicon.ico" />
                     <link
                         rel="stylesheet"
                         href="https://fonts.googleapis.com/earlyaccess/notosanskr.css"
