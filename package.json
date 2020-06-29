@@ -8,7 +8,7 @@
         "build": "node scripts/clean && webpack -p --config webpack.prod.js",
         "test": "echo \"Error: no test specified\" && exit 1",
         "eject": "react-scripts eject",
-        "deploy": "npm run build&&gh-pages -d public"
+        "deploy": "gh-pages -d public"
     },
     "homepage": "https://insoo-Jang.github.io/ReactRouter-tutorial-code",
     "dependencies": {

@@ -18,7 +18,6 @@ const plugins = [
 ]
 module.exports = merge(baseConfig, {
     mode: 'production',
-    devtool: 'source-map',
     entry: {
         vendor: ['react', 'react-dom', 'lodash', 'antd'],
         app: [path.resolve(__dirname, 'src/index.js')],
@@ -27,8 +26,8 @@ module.exports = merge(baseConfig, {
         // entry에 존재하는 app.js, vendor.js로 뽑혀 나온다.
         path: path.resolve(__dirname, 'public'),
         filename: 'js/[name].[chunkhash:16].js',
-        chunkFilename: 'js/[id].[chunkhash:16].js',
-        publicPath: './',
+        chunkFilename: 'js/[name].[chunkhash:16].js',
+        publicPath: '/',
     },
     optimization: {
         minimizer: [
