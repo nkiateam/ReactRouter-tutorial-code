@@ -19,7 +19,6 @@ class App extends Component {
 
     renderRoutes = routes =>
         routes.reduce((prev, route) => {
-            console.log()
             return prev.concat(
                 <React.Fragment key={route.path}>
                     {this.renderRoute(route)}

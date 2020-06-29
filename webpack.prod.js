@@ -3,8 +3,6 @@ const path = require('path')
 const merge = require('webpack-merge')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const TerserPlugin = require('terser-webpack-plugin')
-const WorkboxPlugin = require('workbox-webpack-plugin')
-
 const baseConfig = require('./webpack.common.js')
 
 const plugins = [
@@ -16,10 +14,6 @@ const plugins = [
     new HtmlWebpackPlugin({
         filename: 'index.html',
         title: 'React Design Editor',
-    }),
-    new WorkboxPlugin.InjectManifest({
-        swSrc: './src/sw.js',
-        swDest: 'sw.js',
     }),
 ]
 module.exports = merge(baseConfig, {

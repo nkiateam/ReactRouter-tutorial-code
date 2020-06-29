@@ -4,33 +4,33 @@ import Context from '../commons/container/Context'
 
 const treeData = [
     {
-        title: 'root',
+        title: '0-0',
         key: '0-0',
         children: [
             {
-                title: '자전거',
+                title: '0-0-0',
                 key: '0-0-0',
                 children: [
                     {
-                        title: '동호회',
+                        title: '0-0-0-0',
                         key: '0-0-0-0',
                     },
                     {
-                        title: '모집',
+                        title: '0-0-0-1',
                         key: '0-0-0-1',
                     },
                 ],
             },
             {
-                title: '회사',
+                title: '0-0-1',
                 key: '0-0-1',
                 children: [
                     {
-                        title: '출근',
+                        title: '0-0-1-0',
                         key: '0-0-1-0',
                     },
                     {
-                        title: '퇴근',
+                        title: '0-0-1-1',
                         key: '0-0-1-1',
                     },
                 ],
@@ -48,7 +48,6 @@ const treeComponent = props => {
         if (param.length === 0) {
             return
         }
-        console.log(param)
         onSelectResource(param)
     }
     return (
@@ -56,7 +55,7 @@ const treeComponent = props => {
             <Col span={12}>
                 <Tree
                     onSelect={onSelectTree}
-                    // onCheck={onCheck}
+                    defaultExpandAll
                     defaultExpandedKeys={['0-0']}
                     treeData={treeData}
                 />

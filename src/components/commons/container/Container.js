@@ -7,7 +7,6 @@ import Context from './Context'
 
 const Container = props => {
     const { children, routes, history, location, match } = props
-    console.log(props)
     const footerStyle = {
         height: '30px',
         lineHeight: '30px',

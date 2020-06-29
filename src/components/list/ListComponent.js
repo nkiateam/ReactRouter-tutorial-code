@@ -1,20 +1,40 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import { Avatar, List } from 'antd'
 import SubContainer from '../commons/container/SubContainer'
 
-const data = []
-for (let i = 0; i < 25; i++) {
-    data.push({
-        href: 'https://ant.design',
-        title: `ant design part ${i}`,
+const data = [
+    {
+        title: <Link to="/MonitoringComponent/0-0-0-0">0-0-0-0</Link>,
         avatar:
             'https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png',
         description:
             'Ant Design, a design language for background applications, is refined by Ant UED Team.',
-    })
-}
+    },
+    {
+        title: <Link to="/MonitoringComponent/0-0-0-1">0-0-0-1</Link>,
+        avatar:
+            'https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png',
+        description:
+            'Ant Design, a design language for background applications, is refined by Ant UED Team.',
+    },
+    {
+        title: <Link to="/MonitoringComponent/0-0-1-0">0-0-1-0</Link>,
+        avatar:
+            'https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png',
+        description:
+            'Ant Design, a design language for background applications, is refined by Ant UED Team.',
+    },
+    {
+        title: <Link to="/MonitoringComponent/0-0-1-1">0-0-1-1</Link>,
+        avatar:
+            'https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png',
+        description:
+            'Ant Design, a design language for background applications, is refined by Ant UED Team.',
+    },
+]
 
-const ListComponent = props => {
+const ListComponent = () => {
     const main = (
         <div
             style={{
