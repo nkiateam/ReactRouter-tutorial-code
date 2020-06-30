@@ -6,15 +6,9 @@ import sortBy from 'lodash/sortBy'
 import i18n from 'i18next'
 
 const MainMenu = props => {
-    const menuStyle = {
-        background: 'none',
-        fontWeight: 'bold',
-        color: 'gray',
-        lineHeight: '64px',
-    }
     const { location, routes } = props
+
     // const { pathname } = location
-    // const onePath = pathname.split('/').length === 2
     // const onePathname = pathname.split('/')[1]
 
     const [menus, setMenus] = useState([])
@@ -80,7 +74,7 @@ const MainMenu = props => {
                 </Menu.Item>
             )
         })
-    };
+    }
 
     return (
         <Menu
@@ -88,7 +82,6 @@ const MainMenu = props => {
             theme="light"
             // defaultSelectedKeys={[`/${onePathname}`]}
             // selectedKeys={[`/${onePathname}`]}
-            style={menuStyle}
             className="ant-layout-navbar-nav"
         >
             {renderMenus(menus)}
