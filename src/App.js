@@ -36,7 +36,9 @@ class App extends Component {
                     />
                     <title>Router-tutorial-code</title>
                 </Helmet>
-                Hello Nkia.
+                <Container>
+                    Hello Nkia.
+                </Container>
             </Layout>
         )
     }
