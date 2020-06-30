@@ -1,33 +1,21 @@
 import React, { Component } from 'react'
 import { Layout } from 'antd'
 import { Helmet } from 'react-helmet'
-import { BrowserRouter, Switch, Route, Redirect } from 'react-router-dom'
-import { routes as mainRoutes } from './routes'
-
 import { Container } from './components/commons'
+import Dashboard from './components/dashboard/Dashboard'
+import ListComponent from './components/list/ListComponent'
 
 class App extends Component {
-    renderRoute = route => (
-        <Route
-            key={route.path}
-            exact
-            strict
-            path={route.path}
-            component={route.component}
-        />
-    )
 
-    renderRoutes = routes =>
-        routes.reduce((prev, route) => {
-            return prev.concat(
-                <React.Fragment key={route.path}>
-                    {this.renderRoute(route)}
-                    {route.subRoutes && route.subRoutes.length
-                        ? this.renderRoutes(route.subRoutes)
-                        : null}
-                </React.Fragment>,
-            )
-        }, [])
+    renderRoute = route => {
+        return (<Route key={route.path} exact strict path={route.path} component={route.component}/>)
+    }
+
+    renderRoutes = routes => routes.reduce((prev, route) => prev.concat(
+        <React.Fragment key={route.path}>
+            {this.renderRoute(route)}
+        </React.Fragment>,
+    ), []);
 
     render() {
         return (
@@ -48,26 +36,7 @@ class App extends Component {
                     />
                     <title>Router-tutorial-code</title>
                 </Helmet>
-                <BrowserRouter>
-                    <Switch>
-                        <Container routes={mainRoutes}>
-                            <React.Suspense fallback={<div>loading...</div>}>
-                                <Route
-                                    exact
-                                    path="/"
-                                    render={() => {
-                                        return (
-                                            <Redirect
-                                                to={'/MonitoringComponent'}
-                                            />
-                                        )
-                                    }}
-                                />
-                                {this.renderRoutes(mainRoutes)}
-                            </React.Suspense>
-                        </Container>
-                    </Switch>
-                </BrowserRouter>
+                Hello Nkia.
             </Layout>
         )
     }

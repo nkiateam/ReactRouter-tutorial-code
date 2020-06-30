@@ -32,7 +32,7 @@ const Container = props => {
         <React.Fragment>
             <Context.Provider value={context}>
                 <Layout.Header>
-                    <Header routes={routes} />
+                    <Header routes={routes}/>
                 </Layout.Header>
                 <Layout.Content style={{ display: 'flex' }}>
                     {children}
@@ -47,4 +47,4 @@ const Container = props => {
     )
 }
 
-export default withRouter(Container)
+export default Container

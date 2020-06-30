@@ -5,28 +5,28 @@ import SubContainer from '../commons/container/SubContainer'
 
 const data = [
     {
-        title: <Link to="/MonitoringComponent/0-0-0-0">0-0-0-0</Link>,
+        title: 1,
         avatar:
             'https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png',
         description:
             'Ant Design, a design language for background applications, is refined by Ant UED Team.',
     },
     {
-        title: <Link to="/MonitoringComponent/0-0-0-1">0-0-0-1</Link>,
+        title: 2,
         avatar:
             'https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png',
         description:
             'Ant Design, a design language for background applications, is refined by Ant UED Team.',
     },
     {
-        title: <Link to="/MonitoringComponent/0-0-1-0">0-0-1-0</Link>,
+        title: 3,
         avatar:
             'https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png',
         description:
             'Ant Design, a design language for background applications, is refined by Ant UED Team.',
     },
     {
-        title: <Link to="/MonitoringComponent/0-0-1-1">0-0-1-1</Link>,
+        title: 4,
         avatar:
             'https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png',
         description:

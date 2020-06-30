@@ -2,7 +2,6 @@ import React, { useEffect, useState } from 'react'
 import { Menu } from 'antd'
 import { MenuUnfoldOutlined } from '@ant-design/icons'
 import sortBy from 'lodash/sortBy'
-import { withRouter } from 'react-router-dom'
 
 import i18n from 'i18next'
 
@@ -14,13 +13,13 @@ const MainMenu = props => {
         lineHeight: '64px',
     }
     const { location, routes } = props
-    const { pathname } = location
-    const onePath = pathname.split('/').length === 2
-    const onePathname = pathname.split('/')[1]
-    const [menus, setMenus] = useState([])
-    const [collapsed, setCollapsed] = useState(false)
+    // const { pathname } = location
+    // const onePath = pathname.split('/').length === 2
+    // const onePathname = pathname.split('/')[1]
 
-    const buildMenus = param => {
+    const [menus, setMenus] = useState([])
+
+    const buildMenus = (param = []) => {
         const menu = () => {
             const newMenus = param.reduce((prev, curr) => {
                 if (!curr.isMenu) {
@@ -51,14 +50,10 @@ const MainMenu = props => {
         const { key, title, icon } = menu
         return (
             <>
-                {/*{icon && <Icon type={icon} />}*/}
                 <MenuUnfoldOutlined />
                 <span>{i18n.t(menu.title) || key}</span>
             </>
         )
-    }
-    const handleCollapse = param => {
-        setCollapsed(param)
     }
 
     const renderMenus = param => {
@@ -85,25 +80,20 @@ const MainMenu = props => {
                 </Menu.Item>
             )
         })
-    }
+    };
+
     return (
-        // <Sidebar onCollapse={handleCollapse} collapsed={collapsed} width={240}>
         <Menu
-            // theme="dark"
             mode="horizontal"
             theme="light"
-            defaultSelectedKeys={[`/${onePathname}`]}
-            selectedKeys={[`/${onePathname}`]}
-            // style={menuStyle}
+            // defaultSelectedKeys={[`/${onePathname}`]}
+            // selectedKeys={[`/${onePathname}`]}
+            style={menuStyle}
             className="ant-layout-navbar-nav"
-            // defaultSelectedKeys={[isNumber ? pathname : `/${onePathname}`]}
-            // selectedKeys={[isNumber ? pathname : `/${onePathname}`]}
-            // defaultOpenKeys={onePath ? null : [`/${onePathname}`]}
         >
             {renderMenus(menus)}
         </Menu>
-        // </Sidebar>
     )
 }
 
-export default withRouter(MainMenu)
+export default MainMenu

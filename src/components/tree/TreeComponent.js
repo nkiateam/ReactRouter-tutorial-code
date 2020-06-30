@@ -42,19 +42,19 @@ const treeData = [
 const treeComponent = props => {
     const { onSelect = () => {} } = props
 
-    const { onSelectResource } = useContext(Context)
-
-    const onSelectTree = param => {
-        if (param.length === 0) {
-            return
-        }
-        onSelectResource(param)
-    }
+    // const { onSelectResource={} } = useContext(Context)
+    //
+    // const onSelectTree = param => {
+    //     if (param.length === 0) {
+    //         return
+    //     }
+    //     onSelectResource(param)
+    // }
     return (
         <Row justify="left" align="middle">
             <Col span={12}>
                 <Tree
-                    onSelect={onSelectTree}
+                    // onSelect={onSelectTree}
                     defaultExpandAll
                     defaultExpandedKeys={['0-0']}
                     treeData={treeData}
