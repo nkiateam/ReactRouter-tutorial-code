@@ -23,4 +23,4 @@
 
 ## Installation
 
--   git clone -b feature/step2 --single-branch https://github.com/insoo-Jang/react-router-tutorial.git
+-   git clone -b feature/step1 --single-branch https://github.com/insoo-Jang/react-router-tutorial.git
