@@ -6,6 +6,15 @@ import Dashboard from './components/dashboard/Dashboard'
 import ListComponent from './components/list/ListComponent'
 
 class App extends Component {
+    // renderRoute = route => {
+    //     return (<Route key={route.path} exact strict path={route.path} component={route.component}/>)
+    // }
+    //
+    // renderRoutes = routes => routes.reduce((prev, route) => prev.concat(
+    //     <React.Fragment key={route.path}>
+    //         {this.renderRoute(route)}
+    //     </React.Fragment>,
+    // ), []);
 
     render() {
         return (
