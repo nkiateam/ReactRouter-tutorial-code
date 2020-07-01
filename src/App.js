@@ -4,7 +4,6 @@ import { Helmet } from 'react-helmet'
 import { Container } from './components/commons'
 import Dashboard from './components/dashboard/Dashboard'
 import ListComponent from './components/list/ListComponent'
-import {Route} from "react-router-dom";
 
 class App extends Component {
     // renderRoute = route => {
