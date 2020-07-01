@@ -6,6 +6,7 @@ import Dashboard from './components/dashboard/Dashboard'
 import ListComponent from './components/list/ListComponent'
 
 class App extends Component {
+
     render() {
         return (
             <Layout style={{ height: '100%' }}>
@@ -25,7 +26,9 @@ class App extends Component {
                     />
                     <title>Router-tutorial-code</title>
                 </Helmet>
-                <Container>Hello Nkia.</Container>
+                <Container>
+                    Hello Nkia.
+                </Container>
             </Layout>
         )
     }
