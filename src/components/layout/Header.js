@@ -2,8 +2,7 @@ import React from 'react'
 
 import { MainMenu } from '../menu'
 
-const Header = () => {
-
+const Header = ({ routes }) => {
     return (
         <React.Fragment>
             <div className="ant-layout-navbar">
@@ -12,7 +11,7 @@ const Header = () => {
                         <img src="/images/NKIA_logo_1_.png" alt="" />
                     </div>
                 </div>
-                <MainMenu />
+                <MainMenu routes={routes} />
             </div>
         </React.Fragment>
     )

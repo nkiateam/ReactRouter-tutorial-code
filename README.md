@@ -21,6 +21,10 @@
 -   [뒤로가기](https://github.com/insoo-Jang/ReactRouter-tutorial-code/tree/develop)
 -   [완료소스](https://github.com/insoo-Jang/ReactRouter-tutorial-code/tree/develop)
 
+## Installation
+
+-   git clone -b step2 --single-branch https://github.com/insoo-Jang/react-router-tutorial.git
+
 ## Idex 
 
 
